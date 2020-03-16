@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> 
+  Dice Roller
+  </title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="description" content="Free online dice roller">
+  <meta name="keywords" content="dnd, d&d, dice, dice-roll, dice-reoller, diceroller, d4, d6, d8, d10, d12, d20">
+</head>
+<body>
+  <h1>I's your turn to roll!</h1>
+  <div id="dice">
+    <input type="image" src="images/d4.png" id="d4" class="die" onclick="rollDice(4)">
+    <input type="image" src="images/d6.png" id="d6" class="die" onclick="rollDice(6)">
+    <input type="image" src="images/d8.png" id="d8" class="die" onclick="rollDice(8)">
+    <input type="image" src="images/d10.png" id="d10" class="die" onclick="rollDice(10)">
+    <input type="image" src="images/d12.png" id="d12" class="die" onclick="rollDice(12)">
+    <input type="image" src="images/d20.png" id="d20" class="die" onclick="rollDice(20)">
+  </div>
+  <div>
+    <p id="result"></p>
+    <p id="sum"></p>
+  </div>
+  
+  
+  <script>
+
+var arr = [];
+    function rollDice(num){
+      var x = Math.floor(Math.random()*num)+1;
+      var r = document.getElementById("result");
+      result.innerHTML += (x+ ", ");
+      
+      arr.push(x);
+      console.log(arr);
+
+      function sumOfArr(a, b){
+        return a + b;
+      }
+      document.getElementById("sum").innerHTML = arr.reduce(sumOfArr);
+    }
+    
+
+  </script>
+
+</body>
+</html>
